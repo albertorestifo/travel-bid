@@ -10,6 +10,39 @@ services:
     volumes:
       - hackathon-db:/data/db
 
+  candidates:
+    build: ./candidates
+    ports:
+      - "5000"
+    networks:
+      - net
+
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    environment:
+      - "DS_SERVICE=candidates:5000/candidates"
+    networks:
+      - net
+
+  app:
+    build: ./app-front
+    ports:
+      - "8080:8081"
+    environment:
+      - "REACT_APP_HOTELS_COMBINED_KEY_VALUE=5FAB425F-56F4-4E7B-AF6D-9868557BDE31"
+      - "REACT_APP_TRAVEL_BID=http://backend:8080"
+    networks:
+      - net
+
+  client:
+    build: ./compnay-front
+    ports:
+      - "8080:8082"
+    networks:
+      - net
+
 networks:
   net:
 

@@ -4,3 +4,9 @@
 [submodule "backend"]
 	path = backend
 	url = https://github.com/albertorestifo/travel-bid-backend.git
+[submodule "compnay-front"]
+	path = compnay-front
+	url = git@github.com:fjaguero/hackatrips-2018-team-10-company-frontend.git
+[submodule "app-front"]
+	path = app-front
+	url = git@github.com:gpuenteallott/hackatrips-2018-team-10-user-frontend.git
