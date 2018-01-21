@@ -1,0 +1,6 @@
+[submodule "candidates"]
+	path = candidates
+	url = https://github.com/eherrerosj/TravelBid.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/albertorestifo/travel-bid-backend.git
